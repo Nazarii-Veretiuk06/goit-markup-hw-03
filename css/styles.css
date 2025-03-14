@@ -1,5 +1,4 @@
 /* Global reset */
-
 *,
 *::before,
 *::after {
@@ -25,10 +24,9 @@ h6 {
 
 /* Global styles */
 img {
-  display: block;
+  display: block; /* Вимога: картинки як блокові елементи */
 }
 
-/* styles.css */
 /* Base styles */
 body {
   font-family: "Roboto", sans-serif;
@@ -36,9 +34,9 @@ body {
   background-color: #ffffff;
 }
 .container {
-  max-width: 1158px;
-  padding: 0 15px 0 15px;
-  margin-left: auto;
+  max-width: 1158px; /* Вимога: width: 1158px */
+  padding: 0 15px; /* Вимога: padding: 0 15px */
+  margin-left: auto; /* Вимога: margin: 0 auto */
   margin-right: auto;
 }
 .visually-hidden {
@@ -55,40 +53,18 @@ body {
 }
 
 /* Header styles */
-.nav {
-  display: flex;
-  align-items: center;
-}
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
 .page-header {
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc; /* Вимога: нижня межа хедера */
 }
-.header_cont {
-  display: flex;
+.header-cont {
+  display: flex; /* Вимога: розміщення в одну лінію */
   justify-content: space-between;
   align-items: center;
 }
-.header {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
+.nav {
+  display: flex; /* Вимога: логотип і меню в одну лінію */
+  align-items: center; /* Вимога: вирівнювання по вертикалі */
 }
-.nav-link {
-  color: #2e2f42;
-  padding: 24px 0 24px;
-  display: block;
-}
-.nav-link:hover,
-.nav-link:focus {
-  color: #404bbf;
-}
-
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -97,35 +73,42 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
-  padding: 24px 0 24px;
+  margin-right: 76px; /* Вимога: відступ від логотипа */
+  padding: 24px 0;
 }
 .logo:hover,
-.logo-focus {
+.logo:focus {
   color: #404bbf;
 }
-
 .logo-studio {
   color: #2e2f42;
 }
-
-.nav-link {
+.nav-list {
+  display: flex; /* Вимога: пункти меню по горизонталі */
+  gap: 40px; /* Вимога: відступи між пунктами */
+}
+.header-item {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
-.web {
+.nav-link {
   color: #2e2f42;
+  padding: 24px 0; /* Вимога: відступи всередині посилання */
+  display: block;
 }
-
+.nav-link:hover,
+.nav-link:focus {
+  color: #404bbf;
+}
 .contact-info {
   font-style: normal;
 }
-.contact_list {
-  display: flex;
-  gap: 40px;
+.contact-list {
+  display: flex; /* Вимога: контакти по горизонталі */
+  gap: 40px; /* Вимога: відступи між контактами */
 }
 .contact-link {
   font-weight: 400;
@@ -134,7 +117,6 @@ body {
   letter-spacing: 0.02em;
   color: #434455;
 }
-
 .contact-link:hover,
 .contact-link:focus {
   color: #404bbf;
@@ -143,9 +125,8 @@ body {
 /* Hero section */
 .hero-section {
   background: #2e2f42;
-  padding: 188px 0 188px;
+  padding: 188px 0; /* Вимога: відступи секції */
 }
-
 .hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -153,47 +134,44 @@ body {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  max-width: 496px;
+  max-width: 496px; /* Вимога: ширина заголовка */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 48px;
 }
-
 .hero-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
-  background: #2e2f42;
-  background-color: #4d5ae5;
+  background-color: #4d5ae5; /* Вимога: колір фону */
   font-family: "Roboto", sans-serif;
-  display: block;
-  min-width: 169px;
-  height: 56px;
-  border: none;
-  border-radius: 4px;
+  display: block; /* Вимога: для центрування */
+  min-width: 169px; /* Вимога: мінімальна ширина */
+  height: 56px; /* Вимога: висота */
+  border: none; /* Вимога: без межі */
+  border-radius: 4px; /* Вимога: заокруглення */
+  cursor: pointer; /* Вимога: тип курсору */
   margin-left: auto;
   margin-right: auto;
 }
-
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
 }
 
+/* Features section */
 .features-section {
-  padding: 120px 0 120px;
+  padding: 120px 0; /* Вимога: відступи секції */
 }
 .features-list {
   display: flex;
-  gap: 24px;
+  gap: 24px; /* Вимога: відступи між елементами */
 }
-
 .feature-item {
-  width: calc((100% - 72px) / 4);
+  width: calc((100% - 72px) / 4); /* Вимога: ширина елементів */
 }
-
 .item-title {
   font-weight: 500;
   font-size: 20px;
@@ -202,7 +180,6 @@ body {
   color: #2e2f42;
   margin-bottom: 8px;
 }
-
 .item-text {
   font-weight: 400;
   font-size: 16px;
@@ -210,45 +187,11 @@ body {
   letter-spacing: 0.02em;
   color: #434455;
 }
+
 /* Team section */
 .team-section {
   background-color: #f4f4fd;
-  padding: 120px 0 120px;
-}
-.team_list {
-  display: flex;
-  gap: 24px;
-}
-
-.team-member {
-  background-color: #ffffff;
-  border-radius: 0px 0px 4px 4px;
-  width: calc((100% - 72px) / 4);
-}
-.member-name {
-  padding: 32px 0 32px;
-}
-.team-names {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #2e2f42;
-  margin-bottom: 8px;
-}
-
-.team-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #434455;
-}
-.portfolio-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0; /* Вимога: відступи секції */
 }
 .section-title {
   font-weight: 700;
@@ -258,19 +201,67 @@ body {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
-  margin-bottom: 72px;
+  margin-bottom: 72px; /* Вимога: відступ від заголовка */
+}
+.team-list {
+  display: flex; /* Вимога: елементи по горизонталі */
+  gap: 24px; /* Вимога: відступи між елементами */
+}
+.team-member {
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px; /* Вимога: заокруглення знизу */
+  width: calc((100% - 72px) / 4); /* Вимога: ширина елементів */
+}
+.member-name {
+  padding: 32px 0; /* Вимога: відступи контейнера */
+}
+.team-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center; /* Вимога: вирівнювання по центру */
+  color: #2e2f42;
+  margin-bottom: 8px; /* Вимога: відступ до параграфа */
+}
+.team-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center; /* Вимога: вирівнювання по центру */
+  color: #434455;
+}
+
+/* Portfolio section */
+.portfolio-section {
+  padding-top: 120px; /* Вимога: відступ зверху */
+  padding-bottom: 120px; /* Вимога: відступ знизу */
 }
 .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
+  display: flex; /* Вимога: елементи в рядок */
+  flex-wrap: wrap; /* Вимога: перенесення на новий рядок */
+  column-gap: 24px; /* Вимога: горизонтальні відступи */
+  row-gap: 48px; /* Вимога: вертикальні відступи */
   justify-content: center;
 }
 .portfolio-item {
-  width: calc((100% - 48px) / 3);
+  width: calc((100% - 48px) / 3); /* Вимога: ширина елементів */
 }
 .descr-proj {
+  padding: 32px 16px; /* Вимога: відступи контейнера */
+  border: 1px solid #e7e9fc; /* Вимога: обводка */
+  border-top: none; /* Вимога: скидання верхньої обводки */
+}
+.item-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 8px; /* Вимога: відступ до параграфа */
+}
+.item-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -282,25 +273,9 @@ body {
 .page-footer {
   color: #2e2f42;
   background-color: #2e2f42;
-  padding: 100px 0 100px;
-}
-.footer-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
-  max-width: 264px;
+  padding: 100px 0; /* Вимога: відступи секції */
 }
 .logo-w {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
-  max-width: 264px;
-}
-.logo-studio {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -308,10 +283,22 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  display: inline-block;
-  margin-bottom: 16px;
-  padding: 24px 0 24px;
+  display: inline-block; /* Вимога: блочні властивості */
+  margin-bottom: 16px; /* Вимога: відступ до параграфа */
 }
+.logo-w .logo-studio {
+  color: #f4f4fd; /* Виправлено для футера */
+}
+.footer-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  max-width: 264px; /* Вимога: максимальна ширина */
+}
+
+/* Загальні стилі */
 a {
   text-decoration: none;
 }
